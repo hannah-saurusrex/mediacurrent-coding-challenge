@@ -1,0 +1,103 @@
+:root {
+    --blue: #003954;
+    --darkBlue: #012A3A;
+    --white: #FFFFFF;
+    --offWhite: #EFEFEF;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Fauna One', serif;
+    font-family: 'Playfair Display', serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+body {
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hero header ."
+    "hero content ."
+    "hero content ."
+}
+
+.hero {
+    grid-area: hero;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px 20px 0 20px;
+}
+
+.content {
+    grid-area: content;
+    color: var(--darkBlue);
+    padding-left: 40px;
+}
+
+.content h4 {
+    font-family: 'Fauna One', serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 98px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--darkBlue);
+}
+
+.content p {
+    font-family: 'Fauna One', serif;
+    max-width: 40%;
+    margin-top: 40px;
+}
+
+.content button {
+    margin-top: 20px;
+    font-family: 'Fauna One', serif;
+    font-size: 20px;
+    border-radius: 30px;
+    border: 1px solid var(--blue);
+    background-color: var(--white);
+    box-shadow: 6px 6px 20px 6px rgba(0, 0, 0, 0.19);
+    color: var(--darkBlue);
+    height: 58px;
+    width: 188px;
+    outline: none;
+}
