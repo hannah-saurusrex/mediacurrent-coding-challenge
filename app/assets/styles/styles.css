@@ -9,6 +9,8 @@ html {
     box-sizing: border-box;
     font-family: 'Fauna One', serif;
     font-family: 'Playfair Display', serif;
+    height: 100%;
+    background-color: var(--offWhite);
 }
 
 *,
@@ -28,13 +30,12 @@ h6 {
 
 body {
     margin: 0 auto;
-    height: 100vh;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     "hero header ."
     "hero content ."
@@ -60,12 +61,72 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding: 20px 20px 0 20px;
+    margin: 45px;
+}
+
+.btn--toggle {
+    font-family: 'Fauna One', serif;
+    font-size: 16px;
+    border: 1px solid var(--blue);
+    border-radius: 30px;
+    background-color: var(--offWhite);
+    color: var(--blue);
+    padding: 10px 12px 8px 3px;
+}
+
+.btn-icon {
+    width: 40px;
+    display: block;
+    float: left;
+}
+
+.btn-icon img {
+    height: 55%;
+    width: 55%;
+    padding-top: 2px;
+}
+
+.btn-text {
+    float: left;
+    padding-top: 3px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+    position: relative;
+    display: none;
+    visibility: hidden;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--darkBlue);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
 }
 
 .content {
     grid-area: content;
-    color: var(--darkBlue);
+    color: var(--blue);
     padding-left: 40px;
 }
 
@@ -79,25 +140,31 @@ img {
     font-family: 'Playfair Display', serif;
     font-size: 98px;
     font-weight: bold;
-    border-bottom: 3px solid var(--darkBlue);
+}
+
+.content h1:after {
+    content: "";
+    display: block;
+    width: 28%;
+    padding-top: 20px;
+    border-bottom: 3px solid var(--blue);
 }
 
 .content p {
     font-family: 'Fauna One', serif;
-    max-width: 40%;
+    max-width: 35%;
     margin-top: 40px;
+    padding-bottom: 30px;
 }
 
-.content button {
-    margin-top: 20px;
+a.button {
     font-family: 'Fauna One', serif;
     font-size: 20px;
-    border-radius: 30px;
     border: 1px solid var(--blue);
+    border-radius: 30px;
     background-color: var(--white);
-    box-shadow: 6px 6px 20px 6px rgba(0, 0, 0, 0.19);
-    color: var(--darkBlue);
-    height: 58px;
-    width: 188px;
-    outline: none;
+    text-decoration: none;
+    color: var(--blue);
+    padding: 12px 25px;
+    box-shadow: 3px 3px 15px 6px rgba(0, 0, 0, 0.19);
 }
