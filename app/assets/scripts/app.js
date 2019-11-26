@@ -1,19 +1,10 @@
-var checkbox = document.querySelector('input[name=theme]');
-
-checkbox.addEventListener('change', function() {
-    if(this.checked) {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
+function darkMode() {
+    var x = document.getElementById("dark-mode");
+    if (x.innerHTML === "Dark Mode") {
+        x.innerHTML = "Light Mode";
     } else {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'light')
+        x.innerHTML = "Dark Mode";
     }
-});
-
-let trans = () => {
-    document.documentElement.classList.add('transition');
-    wondow.setTimeout(() => {
-        document.documentElement.classList.remove('transition');
-    }, 1000)
-};
-
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}

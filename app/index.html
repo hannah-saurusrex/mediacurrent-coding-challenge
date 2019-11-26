@@ -13,26 +13,26 @@
         <div class="item hero">
             <img src="assets/images/background.jpg" alt="misty mountains" />
         </div>
+
         <div class="item header">
             <a href="https://www.mediacurrent.com"><img src="assets/images/logo.svg" alt="mediacurrent M logo" /></a>
-            <button class="btn--toggle">
+            
+           <button class="theme-switch" onclick="darkMode()">
                 <span class="btn-icon">
                     <img src="assets/images/mode-icon.svg" alt="dark and light mode toggle" />
                 </span>
-                
-                <span class="btn-text">
-                    <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
-                    Dark Mode
-                </span>
-                
-            </button>
+                    
+                <span id="dark-mode" class="btn-text">Dark Mode</span>
+           </button>
         </div>
 
         <div class="item content">
-            <h4>Error 404</h4>
-            <h1>Page Not Found</h1>
-            <p>Looks like you're off the beaten path. Sorry about that.</p>
-            <a href="https://www.mediacurrent.com" class="button">Take Me Home</a>
+            <div id="dark-mode">
+                <h4>Error 404</h4>
+                <h1>Page Not Found</h1>
+                <p>Looks like you're off the beaten path. Sorry about that.</p>
+                <a href="https://www.mediacurrent.com" id="dark-mode" class="button">Take Me Home</a>
+            </div>
         </div>
     </div>
 
