@@ -1,9 +1,9 @@
 :root {
     --text: #003954;
-    --darkBlue: #012A3A;
-    --white: #FFFFFF;
     --background: #EFEFEF;
+    --white: #FFFFFF:
 }
+
 
 html {
     box-sizing: border-box;
@@ -29,6 +29,42 @@ h6 {
 
 body {
     margin: 0 auto;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.dark-mode {
+    background-color: #003954;
+}
+
+.dark-mode p {
+    color: white;
+}
+
+.dark-mode h4 {
+    color: white;
+}
+
+.dark-mode h1 {
+    color: white;
+}
+
+.dark-mode .button {
+    background-color: #012A3A;
+    color: white;
+    border: 1px solid white;
+    box-shadow: none;
+}
+
+
+.dark-mode .theme-switch {
+    background-color: #003954;
+    color: white;
+    border: 1px solid white;
+}
+
+.dark-mode .content h1:after {
+    border-bottom: 3px solid white;
 }
 
 .container {
@@ -39,10 +75,6 @@ body {
     "hero header ."
     "hero content ."
     "hero content ."
-}
-
-.dark-mode {
-    background-color: var(--text);
 }
 
 .hero {
