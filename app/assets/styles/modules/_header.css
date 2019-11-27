@@ -1,0 +1,83 @@
+.header {
+    grid-area: header;
+    display: block;
+    justify-content: space-between;
+    align-items: start;
+    margin: 45px 45px 45px 15px;
+}
+
+.theme-switch {
+    font-family: 'Fauna One', serif;
+    font-size: 16px;
+    border: 1px solid var(--text);
+    border-radius: 30px;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 10px 15px 5px 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.dark-mode .theme-switch {
+    background-color: var(--text);
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+button {
+    outline: none;
+}
+
+.btn-icon {
+    width: 40px;
+    display: block;
+    float: left;
+    position: relative;
+}
+
+.btn-icon svg {
+    height: 63%;
+    width: 63%;
+    padding-top: 1px;
+}
+
+.dark-mode svg path {
+    fill: white;
+}
+
+.btn-text {
+    float: left;
+    padding-top: 3px;
+}
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+
+    .header {
+        grid-area: header;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 667px) {
+
+    .header {
+        grid-area: header;
+        justify-content: space-between;
+        margin: 30px 20px;
+    }
+
+    .theme-switch {
+        padding: 15px 8px;
+    }
+
+    .btn-icon {
+        display: none;
+        visibility: hidden;
+    }
+
+    .btn-text {
+        float: none;
+        padding: 25px 15px;
+        font-size: 16px;
+    }
+}

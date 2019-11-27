@@ -1,0 +1,46 @@
+
+.hero {
+    grid-area: hero;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* responsive styles */
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+
+
+    .hero {
+        grid-area: hero;
+        min-height: 0; /*add this so image height is contained in safari */
+    }
+
+    .hero img {
+        width: 100%;
+        background-size: cover;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 667px) {
+
+
+    .hero {
+        grid-area: hero;
+        min-height: 0; /*add this so image height is contained in safari */
+    }
+
+    .hero img {
+        width: 100%;
+        background-size: contain;
+        overflow: hidden;
+    }
+}

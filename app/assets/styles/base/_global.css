@@ -1,0 +1,35 @@
+:root {
+    --text: #003954;
+    --background: #EFEFEF;
+    --white: #FFFFFF:
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Fauna One', serif;
+    font-family: 'Playfair Display', serif;
+    height: 100%;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--background);
+    color: var(--text);
+}

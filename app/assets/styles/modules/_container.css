@@ -1,0 +1,46 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hero header ."
+    "hero content ."
+    "hero content ."
+}
+
+.dark-mode {
+    background-color: var(--text);
+}
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+
+    html {
+        background-color: var(--background);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 200px auto;
+        grid-template-areas: 
+        "hero"
+        "header"
+        "content"
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 667px) {
+    html {
+        background-color: var(--background);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 200px auto;
+        grid-template-areas: 
+        "hero"
+        "header"
+        "content"
+    }
+}

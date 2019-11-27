@@ -1,0 +1,146 @@
+.content {
+    grid-area: content;
+    color: var(--text);
+    padding-left: 40px;
+}
+
+.content h4 {
+    font-family: 'Fauna One', serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 98px;
+    font-weight: bold;
+}
+
+.content h1:after {
+    content: "";
+    display: block;
+    width: 28%;
+    padding-top: 20px;
+    border-bottom: 3px solid var(--text);
+}
+
+.content p {
+    font-family: 'Fauna One', serif;
+    max-width: 35%;
+    margin-top: 40px;
+    padding-bottom: 45px;
+}
+
+a.button {
+    font-family: 'Fauna One', serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: 1px solid var(--text);
+    border-radius: 60px;
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--text);
+    padding: 20px 25px;
+    box-shadow: 3px 3px 15px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode p {
+    color: white;
+}
+
+.dark-mode h4 {
+    color: white;
+}
+
+.dark-mode h1 {
+    color: white;
+}
+
+.dark-mode .button {
+    background-color: #012A3A;
+    color: white;
+    border: 1px solid white;
+    box-shadow: none;
+}
+
+.dark-mode .content h1:after {
+    border-bottom: 3px solid white;
+}
+
+/* responsive styling */
+
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+
+    .content {
+        grid-area: content;
+        padding-bottom: 60px;
+    }
+
+    .content h4 {
+        font-size: 26px;
+    }
+
+    .content h1 {
+        font-size: 80px;
+        max-width: 75%;
+    }
+
+    .content h1:after {
+        content: "";
+        display: block;
+        width: 42%;
+        padding-top: 20px;
+        border-bottom: 3px solid var(--text);
+    }
+
+    .content p {
+        max-width: 50%;
+        padding-bottom: 35px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    a.button {
+        padding: 22px 28px;
+        border-radius: 60px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 667px) {
+
+    .content {
+        grid-area: content;
+        padding-left: 20px;
+        padding-bottom: 60px;
+    }
+
+    .content h4 {
+        font-size: 28px;
+    }
+
+    .content h1 {
+        font-size: 72px;
+        max-width: 95%;
+    }
+
+    .content h1:after {
+        content: "";
+        display: block;
+        width: 75%;
+        padding-top: 20px;
+        border-bottom: 3px solid var(--text);
+    }
+
+    .content p {
+        max-width: 95%;
+        padding-bottom: 35px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    a.button {
+        padding: 22px 28px;
+        border-radius: 60px;
+        font-size: 20px;
+    }
+}
