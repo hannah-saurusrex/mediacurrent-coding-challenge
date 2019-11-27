@@ -10,6 +10,8 @@ html {
     font-family: 'Fauna One', serif;
     font-family: 'Playfair Display', serif;
     height: 100%;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
 
 *,
@@ -56,15 +58,19 @@ body {
     box-shadow: none;
 }
 
-
 .dark-mode .theme-switch {
     background-color: #003954;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .dark-mode .content h1:after {
     border-bottom: 3px solid white;
+}
+
+.dark-mode svg path {
+    fill: white;
 }
 
 .container {
@@ -93,10 +99,10 @@ img {
 
 .header {
     grid-area: header;
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: start;
-    margin: 45px;
+    margin: 45px 45px 45px 15px;
 }
 
 .theme-switch {
@@ -106,27 +112,26 @@ img {
     border-radius: 30px;
     background-color: var(--background);
     color: var(--text);
-    padding: 15px 15px 10px 15px;
+    padding: 10px 15px 5px 5px;
     float: right;
+    cursor: pointer;
+}
+
+button {
+    outline: none;
 }
 
 .btn-icon {
     width: 40px;
     display: block;
     float: left;
-    transition: all 0.7s;
     position: relative;
-    transform-style: preserve-3d;
 }
 
-.theme-switch:hover .btn-icon {
-    transform: rotateY(-180deg);
-}
-
-.btn-icon img {
-    height: 55%;
-    width: 55%;
-    padding-top: 2px;
+.btn-icon svg {
+    height: 63%;
+    width: 63%;
+    padding-top: 1px;
 }
 
 .btn-text {
@@ -164,34 +169,21 @@ img {
     font-family: 'Fauna One', serif;
     max-width: 35%;
     margin-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
 }
 
 a.button {
     font-family: 'Fauna One', serif;
     font-size: 20px;
+    letter-spacing: 1px;
     border: 1px solid var(--text);
     border-radius: 60px;
     background-color: var(--white);
     text-decoration: none;
     color: var(--text);
-    padding: 12px 25px;
-    box-shadow: 3px 3px 15px 6px rgba(0, 0, 0, 0.19);
+    padding: 20px 25px;
+    box-shadow: 3px 3px 15px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* .dark-theme {
-    --background: #003954;
-    --text: #FFFFFF;
-    background: var(--background);
-
-    .theme-switch {
-        background: var(--background);
-
-        .switch {
-            transform: translateX(37px);
-        }
-    }
-} */
 
 /* responsive styling */
 
@@ -213,6 +205,7 @@ a.button {
 
     .hero {
         grid-area: hero;
+        min-height: 0; /*add this so image height is contained in safari */
     }
 
     .hero img {
@@ -268,7 +261,7 @@ a.button {
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 300px 200px auto;
+        grid-template-rows: 250px 200px auto;
         grid-template-areas: 
         "hero"
         "header"
@@ -277,11 +270,12 @@ a.button {
 
     .hero {
         grid-area: hero;
+        min-height: 0; /*add this so image height is contained in safari */
     }
 
     .hero img {
         width: 100%;
-        background-size: cover;
+        background-size: contain;
         overflow: hidden;
     }
 
@@ -289,6 +283,10 @@ a.button {
         grid-area: header;
         justify-content: space-between;
         margin: 30px 20px;
+    }
+
+    .theme-switch {
+        padding: 15px 8px;
     }
 
     .btn-icon {
@@ -320,7 +318,7 @@ a.button {
     .content h1:after {
         content: "";
         display: block;
-        width: 80%;
+        width: 75%;
         padding-top: 20px;
         border-bottom: 3px solid var(--text);
     }
