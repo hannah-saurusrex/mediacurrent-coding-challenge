@@ -29,6 +29,15 @@ button {
     outline: none;
 }
 
+button:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+button:hover svg path {
+    fill: white;
+}
+
 .btn-icon {
     width: 40px;
     display: block;
@@ -40,6 +49,15 @@ button {
     height: 63%;
     width: 63%;
     padding-top: 1px;
+}
+
+.dark-mode button:hover {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.dark-mode button:hover svg path {
+    fill: var(--text);
 }
 
 .dark-mode svg path {
