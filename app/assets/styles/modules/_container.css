@@ -5,7 +5,8 @@
     grid-template-areas: 
     "hero header ."
     "hero content ."
-    "hero content ."
+    "hero content .";
+    height: 100vh;
 }
 
 .dark-mode {
